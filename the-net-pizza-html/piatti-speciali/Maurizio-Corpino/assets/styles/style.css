@@ -1,0 +1,67 @@
+body {
+    border: 0cap;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Oswald', sans-serif;
+}
+
+#main-header{
+    background-image: url(../tagliatelle.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    margin: 0px;
+    text-shadow: 5px 5px 3px black;
+}
+
+#main-header p{
+    font-family: 'Pacifico', sans-serif;
+    margin: 8px;
+    font-size: 24px;
+    text-shadow: 5px 5px 3px black;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto 0 auto;    
+}
+
+.liste ul{
+    list-style-type: square;
+}
+
+.liste ul,ol {
+    padding-left: 70px;
+}
+
+.tabella {
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid black;
+}
+
+.tabella thead th{
+    width: 300px;
+    justify-content: center;
+    align-items: left;
+    border: 1px solid black;
+}
+.tabella td{
+    text-align: right;
+}
+
+.tabella .nomi-alimenti {
+    text-align: left;    
+}
+
+
