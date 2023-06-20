@@ -6,3 +6,4 @@ TNV Academy Junior Full Stack Developer - Frontend Module course material
 
 ## The Net Pizza
 - [The Net Pizza HTML](https://michelefenu.github.io/tnv-academy-X/the-net-pizza-html)
+- [The Net Pizza CSS](https://michelefenu.github.io/tnv-academy-X/the-net-pizza-css)
