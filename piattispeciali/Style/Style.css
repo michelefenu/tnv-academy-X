@@ -1,3 +1,71 @@
-body{
-    background-color: indigo;
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-header {
+    background: url('../images/pizza.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
+#main-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    margin: 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+#main-header p {
+    font-family: 'Pacifico', sans-serif;
+    margin: 8px;
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu ul li {
+    width: 200px;
+    height: 120px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 8px;
+    position: relative;
+}
+
+.price {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+}
+
+.opening-hours {
+    border: 1px solid black;
+}
+
+.opening-hours td {
+    border: 1px solid black;
+}
+
+.opening-hours th {
+    border: 1px solid black;
 }
