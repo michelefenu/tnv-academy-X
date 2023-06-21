@@ -9,7 +9,7 @@ body {
     background: url('../images/pizza.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +19,7 @@ body {
 
 #main-header h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 72px;
+    font-size: 128px;
     margin: 0;
     text-shadow: 2px 2px 5px black;
 }
@@ -28,7 +28,7 @@ body {
     font-family: 'Pacifico', sans-serif;
     margin: 8px;
     text-shadow: 2px 2px 5px black;
-
+    font-size: 32px;
 }
 
 .container {
@@ -38,18 +38,20 @@ body {
 
 .menu ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 0;
 }
 
 .menu ul li {
-    width: 200px;
-    height: 120px;
+    width: 270px;
+    height: 160px;
     border: 1px solid lightgray;
     border-radius: 5px;
     margin-right: 8px;
     padding: 8px;
     position: relative;
+    margin-bottom: 8px;
 }
 
 .price {
@@ -70,3 +72,82 @@ body {
     border: 1px solid black;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.menu h3 {
+    color: #0371A6;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 16px;
+}
+
+.menu h2 {
+    font-size: 2em;
+    color: #0371A6;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+    margin-top: 32px;
+}
+
+.separator {
+    width: 100px;
+    height: 4px;
+    background-color: #c1922e;
+    margin: 0 auto;
+}
+
+a {
+    color: #730217;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c80125;
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    margin-top: 64px;
+    justify-content: space-evenly;
+    background-color: #8C2703;
+    color: white;
+    box-shadow: 0 -3px 5px lightgray;
+}
+
+footer section {
+    width: 300px;
+    margin: 8px;
+    padding: 32px;
+}
+
+table {
+    border: 0;
+    width: 300px;
+}
+
+table td,
+table th {
+    padding: 4px;
+    text-align: left;
+}
+
+table th {
+    background-color: white;
+    color: #8C2703;
+}
+
+input[type="submit"] {
+    margin: 8px 0;
+    background-color: #0371A6;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+}
