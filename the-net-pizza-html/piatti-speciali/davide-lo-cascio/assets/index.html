@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>The Net Pizza</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-header">
+        <h1>The Net Pizza</h1>
+        <p>L'unica vera pizza per sviluppatori</p>
+    </div>
+    <div class="container">
+        <!-- MENU -->
+        <div class="menu">
+            <h2>I nostri piatti</h2>
+            <div class="separator"></div>
+
+            <h3>Antipasti</h3>
+            <ul>
+                <li>
+                    <span class="dish-name">Tagliere di salumi</span>
+                    <span class="price">12€</span>
+                </li>
+                <li>
+                    <span class="dish-name">Antipasto di mare</span>
+                    <span class="price"> 15€</span>
+                </li>
+                <li>
+                    <span class="dish-name">Zuppa di cozze </span>
+                    <span class="price">8€</span>
+                </li>
+            </ul>
+
+
+            <h3>Primi</h3>
+            <ul>
+                <li>
+                    <span class="dish-name">Pasta alla Carbonara</span>
+                    <span class="dish-description">La pasta alla carbonara è un piatto preparato con ingredienti
+                        popolari e dal gusto intenso.</span>
+                    <span class="price">9€</span>
+                </li>
+                <li>
+                    <span class="dish-name">Pasta Cacio e Pepe</span>
+                    <span class="dish-description">Ingredienti sono molto semplici: pepe nero, formaggio pecorino
+                        romano e pasta.
+                    </span>
+                    <span class="price"> 9€</span>
+                </li>
+                <li>
+                    <span class="dish-name">Bucatini all'Amatriciana</span>
+                    <span class="price"> 7€</span>
+                </li>
+                <li>
+                    <span class="dish-name">Risotto ai Funghi</span>
+                    <span class="price"> 10€</span>
+                </li>
+                <li>
+                    <span class="dish-name">Gnocchi ai Formaggi</span>
+                    <span class="price">10€</span>
+                </li>
+            </ul>
+
+
+
+            <h3>Piatti Speciali</h3>
+            <ul>
+                <li><a href="piatti-speciali/Maurizio-Corpino/">Piatto Speciale di Maurizio</a></li>
+                <li><a href="piatti-speciali/michela-loddo/">Piatto Speciale di Michela</a></li>
+            </ul>
+
+
+            <h3>Dolci</h3>
+        </div>
+        <!-- END MENU -->
+
+        <h2>Contatti</h2>
+
+        <form>
+            <label for="name">Nome</label><br>
+            <input type="text" id="name"><br>
+            <label for="surname">Cognome</label><br>
+            <input type="text" id="surname"><br>
+            <label for="order">Il tuo ordine</label><br>
+            <textarea id="order"></textarea><br>
+
+            <fieldset>
+                <legend>Servizi Aggiuntivi</legend>
+                <input type="checkbox" name="services"> Posate <br>
+                <input type="checkbox" name="services"> Pizza Tagliata <br>
+                <input type="checkbox" name="services"> Consegna Premium <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Servizi di Pagamento</legend>
+                <input type="radio" name="payment"> Contanti alla Consegna <br>
+                <input type="radio" name="payment"> PayPal <br>
+                <input type="radio" name="payment"> Carta di Credito <br>
+            </fieldset>
+
+            <input type="submit" value="Invia ordine">
+
+            <!-- <button>Invia Ordine</button> -->
+        </form>
+
+        <!-- FOOTER -->
+
+    </div>
+    <footer>
+        <section class="opening-hours">
+            <h2 class="footer-section-title">Orari di Apertura</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Giorno</th>
+                        <th>Mattina</th>
+                        <th>Pomeriggio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunedì</td>
+                        <td>Chiuso</td>
+                        <td>Chiuso</td>
+                    </tr>
+                    <tr>
+                        <td>Martedì</td>
+                        <td>12:00 - 15:00</td>
+                        <td>19:00 - 24:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mercoledì</td>
+                        <td>12:00 - 15:00</td>
+                        <td>19:00 - 24:00</td>
+                    </tr>
+                    <tr>
+                        <td>Giovedì</td>
+                        <td>12:00 - 15:00</td>
+                        <td>19:00 - 24:00</td>
+                    </tr>
+                    <tr>
+                        <td>Venerdì</td>
+                        <td>12:00 - 15:00</td>
+                        <td>19:00 - 24:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sabato</td>
+                        <td>12:00 - 15:00</td>
+                        <td>19:00 - 24:00</td>
+                    </tr>
+                    <tr>
+                        <td>Domenica</td>
+                        <td>12:00 - 15:00</td>
+                        <td>19:00 - 24:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="where-we-are">
+            <h2 class="footer-section-title">Dove Siamo</h2>
+            <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=8.286395072937013%2C39.97725164260922%2C8.323259353637697%2C40.000563846393405&amp;layer=mapnik&amp;marker=39.988909359691846%2C8.304836049999949"
+                style="border: 1px solid black"></iframe>
+        </section>
+        <section class="where-we-are">
+            <h2 class="footer-section-title">Credits</h2>
+            Questo sito è realizzato dagli studenti della TNV Academy
+        </section>
+    </footer>
+</body>
+
+</html>
