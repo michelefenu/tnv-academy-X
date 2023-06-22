@@ -4,9 +4,15 @@ body {
     margin: 0%;
     font-family: 'Oswald', sans-serif;
 }
+.container-fluid{   
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: rgba(240, 79, 79, 0.726);
+    
+}
+
 
 #main-header{
-    background-image: url(../tagliatelle.jpg);
+    background-image: url(../images/tagliatelle.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -30,27 +36,38 @@ body {
     font-size: 24px;
     text-shadow: 5px 5px 3px black;
 }
-
+.container h2{
+    color: #0371A6;    
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 16px;
+}
+.container h3{    
+    color: #0371A6;
+    text-align: center;
+    
+    margin: 0;   
+}
 .container {
+    
     width: 900px;
     margin: 0 auto 0 auto;    
 }
 
-.liste ul{
-    list-style-type: square;
-}
-
-.liste ul,ol {
-    padding-left: 70px;
-}
-
-.tabella {
+.tabella {    
+    margin: auto;
+    align-items: center;
     height: fit-content;
     width: fit-content;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .tabella thead th{
+    width: 300px;
+    justify-content: center;
+    align-items: left;   
+}
+.tabella th{
     width: 300px;
     justify-content: center;
     align-items: left;
@@ -58,10 +75,20 @@ body {
 }
 .tabella td{
     text-align: right;
+    border-right: 1px solid black;
 }
 
 .tabella .nomi-alimenti {
-    text-align: left;    
+    text-align: left;
+    border-left: 1px solid black;    
+}
+.separator {
+    width: 100px;
+    height: 4px;
+    background-color: #c1922e;
+    margin: 16px auto;
 }
 
-
+#pippo {
+    text-align: center;
+}
