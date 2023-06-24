@@ -1,0 +1,11 @@
+#main-header{
+    background-image: url(the-net-pizza-html/piatti-speciali/Fabio-Figari/assets/images/piatto.Fabio.jpg.jfif);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
