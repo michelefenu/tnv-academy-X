@@ -1,0 +1,11 @@
+#header-principale{
+    background-image: url(../piatto.Fabio.jpg.jfif);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
