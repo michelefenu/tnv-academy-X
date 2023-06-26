@@ -1,0 +1,158 @@
+
+    body {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #main-header {
+        background: url(../images/Spaghetto.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 375px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-bottom: 24px;
+    }
+
+    #main-header h1 {
+        text-align: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 64px;
+        margin: 0;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    .card {
+        margin-top: 8px;
+        margin-bottom: 48px;
+        image-resolution: 300px;
+        width: 100%;
+        height: auto;
+        font-family: 'Pacifico', sans-serif;
+        box-shadow: 2px 2px 5px grey;
+        font-size: 18px;
+    }
+
+    #main-header p {
+        font-family: 'Pacifico', sans-serif;
+        margin: 16px;
+        text-shadow: 2px 2px 5px black;
+        font-size: 32px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .Descrizione h3 {
+        font-family: 'Bebas Neue', sans-serif;
+        color: #0371A6;
+         text-align: center;
+        font-size: 1.9rem;
+        margin-top: 16px;
+    }
+
+    .Descrizione p{
+        margin-top: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        color: #333333;
+        font-style: italic;
+        text-align: justify;
+        margin-bottom:65px;
+    }
+
+    .ingredienti h3{
+        font-family: 'Bebas Neue', sans-serif;
+        color: #0371A6;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 16px;  
+    }
+
+    .ricetta h3{
+        font-family: 'Bebas Neue', sans-serif;
+        color: #0371A6;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 16px;  
+    }
+
+    .ricetta ul{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #333333;
+        font-style: italic;
+        text-align: justify;
+        margin-bottom:65px;
+        list-style-type: square;
+    }
+
+
+    .tabella {
+        margin-top: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+        width: 50%;
+        border-collapse: collapse;
+        box-shadow: 2px 2px 5px grey;
+    }
+
+    .tabella th {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .tabella td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .nomi-alimenti {
+        text-align: left;
+    }
+
+    #valori-nutrizionali h3{
+       font-family: 'Bebas Neue', sans-serif;
+        color: #0371A6;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 16px;   
+    }
+
+    .separator {
+        width: 120px;
+        height: 4px;
+        background-color: #c1922e;
+        margin: 0 auto;
+    }
+
+    #info h5{
+        font-family: 'Montserrat', sans-serif;
+         color: black;
+         text-align: left;
+         font-size: 12px;
+         margin-top: 16px;   
+     }
+
+    
+      
+
+
+
+
+
+
+
+    
