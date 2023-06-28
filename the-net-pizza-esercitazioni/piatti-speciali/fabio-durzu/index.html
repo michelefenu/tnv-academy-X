@@ -1,116 +1,352 @@
 <!DOCTYPE html>
 <html lang="it">
-  <link rel="stylesheet" href="Style/Style.css">
-
+  
 <head>
-  <title>Pasta al Tonno</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+   rel="stylesheet" 
+   integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+   crossorigin="anonymous">
+  <title>Pancake Semintegrali</title>
 </head>
 
 <body>
-  <h1>Pasta al Tonno</h1>
-  <p>Descrizione del piatto</p>
-  <img src="assets\images\pasta-al-tonno.jpg" height = 400 alt="Pasta al tonno">
-  <h2>Ingredienti</h2>
-  <ul>
-    <li>Pasta lunga(Spaghetti)</li>
-    <li>Roba verde</li>
-    <li>Tonno in scatola</li>
-    <li>Olio extravergine d'oliva</li>
-  </ul>
-  <h2>Ricetta</h2>
-  <p>La pasta al tonno esiste sin da tempi immemori, è indubbiamente il piatto piu triste che esista sulla terra.
-    Nutre da sempre studenti e gente con scarsa voglia di crearsi piatti elaborati.
-    - Mettere l'acqua a bollire(500ml) aggiungendo un cucchiaio di sale
-    - Aggiungere gli spaghetti, 250gr se si vogliono fare 2 porzioni
-    - Scolare la pasta e metterla in un contenitore
-    - Aprire il tonno e lanciarlo dentro brutalmente
-    - Mescolare il tutto sperando invano di poter amalgamare la cosa
-    - Mangialo
+  <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">THE NET PIZZA</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="main-header">
+  <h1>Pancake Semintegrali</h1>
+  <p>Vegani</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="section-title">Ingredienti</h2>
+      <div class="separator"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/farina 0.jpg" class="card-img-top" alt="farina 0">
+        <div class="card-body">
+          <h5 class="card-title">Farina 0</h5>
+          <p class="card-text">130 g</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/farinaintegrale.jpg" class="card-img-top" alt="farina Integrale">
+        <div class="card-body">
+          <h5 class="card-title">Farina Integrale</h5>
+          <p class="card-text">130 g</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/lievito2.jpg" class="card-img-top" alt="Lievito">
+        <div class="card-body">
+          <h5 class="card-title">Lievito per Dolci</h5>
+          <p class="card-text">130 g</p> 
+        </div>
+      </div>
+    </div>    
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/olio.jpg" class="card-img-top" alt="olio">
+        <div class="card-body">
+          <h5 class="card-title">Olio Extravergine d'Oliva</h5>
+          <p class="card-text">1 Cucchiaio</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/sale.jpg" class="card-img-top" alt="Sale">
+        <div class="card-body">
+          <h5 class="card-title">Sale</h5>
+          <p class="card-text">4 g</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/latte.jpg" class="card-img-top" alt="latte">
+        <div class="card-body">
+          <h5 class="card-title">Latte Vegetale</h5>
+          <p class="card-text">300 g</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/zucchero.jpg" class="card-img-top" alt="Zucchero">
+        <div class="card-body">
+          <h5 class="card-title">Zucchero</h5>
+          <p class="card-text">2 Cucchiai</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/vaniglia.jpg" class="card-img-top" alt="Vaniglia">
+        <div class="card-body">
+          <h5 class="card-title">Vaniglia</h5>
+          <p class="card-text">2 g</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2 class="section-title">Per Guarnire</h2>
+      <div class="separator"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/sciroppo.jpg" class="card-img-top" alt="Sciroppo d'Acero">
+        <div class="card-body">
+          <h5 class="card-title">Sciroppo d'Acero</h5>
+          <p class="card-text">130 g</p> 
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-15 col-md-3 py-2">
+      <div class="card">
+        <img src="assets/images/frutta.jpg" class="card-img-top" alt="Frutta">
+        <div class="card-body">
+          <h5 class="card-title">Frutta Fresca</h5>
+          <p class="card-text">50g</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<div class="row">
+  <div class="col-12">
+    <h2 class="section-title">Ricetta</h2>
+    <div class="separator"></div>
+  </div>
+</div>
+  <p>In una ciotola riunisci la farina, lo zucchero, il sale e il lievito, aggiungi l’olio e l’acqua piano piano e inizia a mescolare con una frusta a mano per evitare la formazione di grumi, ottenendo una pastella fluida.
+
+    Se la pastella non è completamente liscia, meglio utilizzare delle fruste elettriche, altrimenti ne sarà compromesso il risultato finale.
+    
+    Scalda una padellina antiaderente e ungi con un pò di olio, versa 2 cucchiai di pastella, allargando leggermente con il dorso del cucchiaio.
+    
+    Non appena si saranno formati i buchini sulla superficie, gira con una spatola e lascia cuocere dall’altro lato, facendo attenzione a non far bruciare il pancake.
+    
+    Appoggia il pancake in un piatto piano e cuoci il resto della pastella, due cucchiai per volta. Quando il fondo della padella risulta troppo asciutto, aggiungi un filo di olio. Io uso uno spruzzino, così l’olio aggiunto è veramente poco!
+    
+    Impila i pancakes sul piatto, in modo che rimangano caldi anche quelli cotti per primi.
+    
+    Servi i pancake senza uova e senza burro con la marmellata o con una crema alla nocciola oppure, secondo la ricetta classica, con sciroppo d’acero e frutta fresca.
   </p>
-  <h2>Tabella Nutrizionale</h2>
-  <table>
-    Valore energetico (Calorie) 194,70 kcal 9,7%
-    Valore energetico (Kjoule) ** 815,17 kJ 9,7%
-    Grassi 4,99 g 7,1%
-    Grassi saturi 1 g 5%
-    Carboidrati 28,62 g 10,6%
-    Zuccheri 1,56 g 1,7%
-    Fibre 1,19 g 4,8%
-    Proteine 8,98 g 18%
-    Sale 0,31 g 5,2%
-    <h2>Contatti</h2>
+  <div>
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Tabella Nutrizionale</h2>
+        <div class="separator"></div>
+      </div>
+    </div>
+    <div class="table-responsive mx-auto">
+    <table class="table table-sm">
+      <tbody>
+        <tr>
+          <th>Componente</th>
+          <th>Quantità</th>
+          <th>% Valore giornaliero</th>
+        </tr>
+        <tr>
+          <td>Calorie</td>
+          <td>151 kcal</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Carboidrati</td>
+          <td>29.40 g</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Proteine</td>
+          <td>5.30 g</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Grassi</td>
+          <td>2.20 g</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>di cui Grassi saturi</td>
+          <td>1 g</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>di cui monosaturi</td>
+          <td>0.90 g</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Zuccheri</td>
+          <td>1.56 g</td>
+          <td>1.7%</td>
+        </tr>
+        <tr>
+          <td>Fibre</td>
+          <td>1.19 g</td>
+          <td>4.8%</td>
+        </tr>
+        <tr>
+          <td>Proteine</td>
+          <td>8.98 g</td>
+          <td>18%</td>
+        </tr>
+        <tr>
+          <td>Sale</td>
+          <td>0.31 g</td>
+          <td>5.2%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <h2 class="section-title">Contatti</h2>
+      <div class="separator"></div>
+    </div>
+  </div>
     <form>
-      <label for="name"> Nome</label><br>
-      <input type"text" id="name"><br>
-      <label for="surname"> Cognome</label><br>
-      <input type"text" id="surname"><br>
-      <label for="order">Il tuo ordine</label><br>
-      <textarea id="order"></textarea><br>
+      <div class="mb-4">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-4">
+        <label for="surname" class="form-label">Cognome</label>
+        <input type="text" class="form-control" id="surname" />
+      </div>
+      <div class="form-floating mb-3">
+        <textarea
+          class="form-control"
+          placeholder="Inserisci qui il tuo ordine..."
+          id="order"
+          style="height: 100px"
+        ></textarea>
+        <label for="order">Inserisci qui il tuo ordine...</label>
+      </div>
       <fieldset>
         <legend>Servizi Aggiuntivi</legend>
         <input type="checkbox" name="services"> Posate<br>
-        <input type="checkbox" name="services"> Pasta senza tonno<br>
         <input type="checkbox" name="services"> Consegna Premium<br>
       </fieldset>
 
       <fieldset>
         <legend>Servizi di Pagamento</legend>
-        <input type="radio" name="payment"> Posate<br>
-        <input type="radio" name="payment"> Pasta senza tonno<br>
-        <input type="radio" name="payment"> Consegna Premium<br>
+        <input type="radio" name="payment"> Contanti<br>
+        <input type="radio" name="payment"> Satispay<br>
+        <input type="radio" name="payment"> Carta di Credito<br>
       </fieldset>
-      <input type="submit" value="invia ordine">
-      <button>Invia Ordine</button>
+      <div class="mb-3, mt-2">
+        <button type="submit" class="btn btn-primary">Inviare</button>
+      </div>
     </form>
-
-    <h2>Orari di Apertura</h2>
-
-    <table>
-      <thead>
-        <th>Giorno</th>
-        <th>Mattina</th>
-        <th>Pomeriggio</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunedì</td>
-          <td>Chiuso</td>
-          <td>Chiuso</td>
-        </tr>
-        <tr>
-          <td>Martedì</td>
-          <td>12:00 - 15:00</td>
-          <td>19:00 - 24.00</td>
-        </tr>
-        <tr>
-          <td>Mercoledì</td>
-          <td>12:00 - 15:00</td>
-          <td>19:00 - 24.00</td>
-        </tr>
-        <tr>
-          <td>Giovedì</td>
-          <td>12:00 - 15:00</td>
-          <td>19:00 - 24.00</td>
-        </tr>
-        <tr>
-          <td>Venerdì</td>
-          <td>12:00 - 15:00</td>
-          <td>19:00 - 24.00</td>
-        </tr>
-        <tr>
-          <td>Sabato</td>
-          <td>12:00 - 15:00</td>
-          <td>19:00 - 24.00</td>
-        </tr>
-        <tr>
-          <td>Domenica</td>
-          <td>12:00 - 15:00</td>
-          <td>19:00 - 24.00</td>
-        </tr>
-      </tbody>
-
-    </table>
-
+    <footer class="container-fluid p-2 p-lg-5">
+      <div class="row">
+        <section class="opening-hours col-12 col-lg-4">
+          <h2 class="footer-section-title">Orari di Apertura</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Giorno</th>
+                <th>Mattina</th>
+                <th>Pomeriggio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunedì</td>
+                <td>Chiuso</td>
+                <td>Chiuso</td>
+              </tr>
+              <tr>
+                <td>Martedì</td>
+                <td>12:00 - 15:00</td>
+                <td>19:00 - 24:00</td>
+              </tr>
+              <tr>
+                <td>Mercoledì</td>
+                <td>12:00 - 15:00</td>
+                <td>19:00 - 24:00</td>
+              </tr>
+              <tr>
+                <td>Giovedì</td>
+                <td>12:00 - 15:00</td>
+                <td>19:00 - 24:00</td>
+              </tr>
+              <tr>
+                <td>Venerdì</td>
+                <td>12:00 - 15:00</td>
+                <td>19:00 - 24:00</td>
+              </tr>
+              <tr>
+                <td>Sabato</td>
+                <td>12:00 - 15:00</td>
+                <td>19:00 - 24:00</td>
+              </tr>
+              <tr>
+                <td>Domenica</td>
+                <td>12:00 - 15:00</td>
+                <td>19:00 - 24:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="where-we-are col-12 col-lg-4">
+          <h2 class="footer-section-title">Dove Siamo</h2>
+          <iframe
+            width="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=8.286395072937013%2C39.97725164260922%2C8.323259353637697%2C40.000563846393405&amp;layer=mapnik&amp;marker=39.988909359691846%2C8.304836049999949"
+            style="border: 1px solid black"
+          ></iframe>
+        </section>
+        <section class="where-we-are col-12 col-lg-4">
+          <h2 class="footer-section-title">Credits</h2>
+          Questo sito è realizzato da Fabio Durzu
+        </section>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>
