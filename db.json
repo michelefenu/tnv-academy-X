@@ -295,6 +295,30 @@
         "sodium": "1203 mg",
         "protein": "21g"
       }
-    }
+    },
+    {
+     "id": 13,
+     "category": "bibite",
+     "title": "Coca Cola",
+     "description": "Una torta molto buona.",
+     "imageUrl": "https://michelefenu.github.io/tnv-academy-X/the-net-pizza-bootstrap/assets/images/tiramisu.jpg",
+     "price": 7,
+     "available": true,
+     "ingredients": [
+       "Savoiardi",
+       "Zabaione",
+       "Caffe"
+     ],
+     "allergens": ["Glutine"],
+     "nutritionalValues": {
+       "kcal": "145",
+       "totalFat": "6g",
+       "saturatedFat": "6g",
+       "cholesterol": "53mg",
+       "carbohydrate": "1,5g",
+       "sodium": "1203 mg",
+       "protein": "21g"
+     }
+   }
   ]
 }
