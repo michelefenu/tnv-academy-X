@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,500,800&display=swap');
+
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: url('../images/piatto-michela.jpg');
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 55px;
+    margin: 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+header h2 {
+    font-family: 'Pacifico', sans-serif;
+    margin: 8px;
+    text-shadow: 2px 2px 5px black;
+    font-size: 30px;
+}
+
+a:hover {
+    color: #4b208877;
+    text-decoration: underline;
+}
+
+a:visited { 
+    color: #4b2088dc; 
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.container p {
+    font-style: italic;
+}
+
+.tabella-nutrizionale {
+    border: 1px solid black;
+}
+
+.tabella-nutrizionale th {
+    border: 1px solid black;
+}
+
+.tabella-nutrizionale td {
+    border: 1px solid black;
+}
+
+table td,
+table th {
+    padding: 4px;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+footer .tabella-nutrizionale{
+    display: flex;
+    margin-top: 64px;
+    justify-content: space-evenly;
+    background-color: #314a598b;
+    color: #ffffff;
+    box-shadow: 0 -3px 5px lightgray;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+.separator {
+    width: 100px;
+    height: 4px;
+    background-color: #002a40d8;
+    margin: 0 auto;
+}
+
+input[type="button"] {
+    margin: 8px 0;
+    background-color: #314a598f;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-width: 15%;
+    margin-right: 20px;
+}
+
+.carousel-caption {
+    color: black;
+    text-align: left;
+    max-width: 25%;
+    top: auto;
+    transform: none;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    padding: 20px;
+    right: 0;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: black;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    background-color: #0000004d;
+}
