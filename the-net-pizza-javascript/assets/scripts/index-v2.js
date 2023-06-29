@@ -13,15 +13,16 @@ const buildMenu = (piatti) => {
     // 1 - Capire quante categorie diverse ci sono
     const categories = [...new Set(piatti.map(x => x.category))];
 
-    // 2 - Ciclarle e creare tante sezioni quante sono le categorie
     const menuSections = document.getElementById('menuSections');
 
+    // 2 - Ciclarle e creare tante sezioni quante sono le categorie
     for (let category of categories) {
         const sectionTitle = document.createElement('div');
         sectionTitle.classList.add('col-12', 'pb-2');
         sectionTitle.innerHTML = `<h3>${category}</h3>`;
         menuSections.appendChild(sectionTitle);
 
+        // 3 - Metterci dentro i piatti
         const sectionPiattiDiv = document.createElement('div');
         sectionPiattiDiv.classList.add('row');
         sectionPiattiDiv.id = category;
@@ -30,17 +31,6 @@ const buildMenu = (piatti) => {
         const sectionPiatti = piatti.filter(x => x.category === category);
         buildSection(sectionPiatti, `${category}`);
     }
-
-
-    // 3 - Metterci dentro i piatti
-
-  /*   const antipasti = piatti.filter(x => x.category === 'antipasti');
-    const primi = piatti.filter(x => x.category === 'primi');
-    const dolci = piatti.filter(x => x.category === 'dolci');
-
-    buildSection(antipasti, 'antipasti');
-    buildSection(primi, 'primi');
-    buildSection(dolci, 'dolci'); */
 
     document.getElementById('menu').style.display = 'block';
     document.getElementById('loadingMessage').style.display = 'none';
