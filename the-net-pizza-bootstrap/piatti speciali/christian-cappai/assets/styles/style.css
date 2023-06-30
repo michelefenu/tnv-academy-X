@@ -157,6 +157,10 @@
         overflow: hidden;
       }
       
+      .link:hover {
+        color: #730217;
+      }
+
       .video iframe {
         position: absolute;
         top: 0;
