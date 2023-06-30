@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
 
 header {
     width: 100%;
-    height: 900px;
+    height: 700px;
     background-image: url('../images/chicken-katsu.jpg');
     background-size: cover;
     display: flex;
@@ -35,10 +35,10 @@ header {
 }
 
 header h1 {
-    color: #730217;
+    color: white;
     font-size: 128px;
     margin: 0;
-    text-shadow: 4px 4px 6px black;
+    text-shadow: 2px 2px 4px black;
 }
 
 header p {
@@ -62,12 +62,51 @@ header p {
     margin-bottom: 32px;
 }
 
+.section-title {
+    color: #0371A6;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.separator {
+    width: 100px;
+    height: 4px;
+    background-color: #c1922e;
+    margin: 0 auto;
+}
+
+.menu h3 {
+    font-size: 1.5em;
+}
+
 a {
     color: #730217;
     text-decoration: none;
 }
 
+a:hover {
+    color: #c80125;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #8C2703;
+    color: white;
+}
+
+table {
+    border: 1px solid lightgray;
+    width: 80%;
+}
+
+table td, table th {
+    padding: 4px;
+    text-align: left;
+}
+
 table th {
+    background-color: white;
     color: #8C2703;
 }
 
@@ -100,3 +139,8 @@ input[type="submit"] {
         font-size: 2.5em;
     }
 }
+
+#carousel-caption {
+    color: #000;
+}
+
