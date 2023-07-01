@@ -9,6 +9,77 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../davide-lo-cascio/assets/styles/theme1.css" />
+    <script>
+      const buildMenu = (piatti) => {
+        function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+        }
+
+        piatti = shuffleArray(piatti);
+        piatti = piatti.slice(0, 3);
+
+        const categories = [...new Set(piatti.map((x) => x.category))];
+
+        const menuSections = document.getElementById('menuSections');
+
+        for (let category of categories) {
+          const sectionTitle = document.createElement('div');
+          sectionTitle.classList.add('col-12', 'pb-2');
+          sectionTitle.innerHTML = `<h3>${category}</h3>`;
+          menuSections.appendChild(sectionTitle);
+
+          const sectionPiattiDiv = document.createElement('div');
+          sectionPiattiDiv.classList.add('row');
+          sectionPiattiDiv.id = category;
+          menuSections.appendChild(sectionPiattiDiv);
+
+          const sectionPiatti = piatti.filter((x) => x.category === category);
+          buildSection(sectionPiatti, `${category}`);
+        }
+
+        document.getElementById('menu').style.display = 'block';
+        document.getElementById('loadingMessage').style.display = 'none';
+      };
+
+      const buildSection = (piatti, sectionName) => {
+        const section = document.getElementById(sectionName);
+
+        for (let piatto of piatti) {
+          const card = document.createElement('div');
+          card.classList.add('col-12', 'col-sm-6', 'col-md-4', 'py-2');
+
+          if (!piatto.available) {
+            card.style.opacity = '0.5';
+          }
+
+          card.innerHTML = `
+            <div class="card shadow">
+                <img
+                    src="${piatto.imageUrl}"
+                    class="card-img-top"
+                    alt="${piatto.title}"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">${piatto.title} - ${piatto.price}€</h5>
+                    <p class="card-text">
+                      ${piatto.description}
+                    </p>
+                </div>
+            </div>`;
+
+          section.appendChild(card);
+        }
+      };
+
+      fetch('http://my-json-server.typicode.com/michelefenu/tnv-academy-X/piatti')
+        .then((response) => response.json())
+        .then((response) => buildMenu(response))
+        .catch((error) => console.log('ERRORE', error));
+    </script>
   </head>
   <body>
     <!-- HEADER -->
@@ -54,7 +125,7 @@
 
     <!-- MAIN CONTENT -->
     <div class="container">
-        <section class="menu">
+        <section class="Ingredienti">
           <div class="row">
             <div class="col-12">
               <h2 class="section-title">Ingredienti</h2>
@@ -178,7 +249,7 @@
       </div>
 
         <div class="container">
-        <section class="menu">
+        <section class="ingredienti salsa curry">
           <div class="row">
             <div class="col-12">
               <div class="separator"></div>
@@ -308,71 +379,43 @@
                   </div>
                 </div>
               </div>
+              <div class="container">
+                <section class="Ingredienti">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="section-title">Istruzioni</h2>
+                      <div class="separator"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 pt-3 pb-2">
+                      <h3>Istruzioni Cottura pollo</h3>
+                      <ul>
+                        <li>Mettere a cuocere il riso</li>
+                        <li>Condire il pollo con sale e pepe</li>
+                        <li>Mettere la farina, l’uovo e il pangrattato in ciotole individuali poco profonde. Lavorando con una cotoletta alla volta, ricoprire con la farina, poi l’uovo e poi il pangrattato.</li>
+                        <li>Dopo 5 minuti, aggiungere l’olio alla pentola. Mettere le cotolette impanate nella pentola e cuocere per 3 o 4 minuti su ogni lato, fino a doratura.</li>
+                        <li>Trasferire le cotolette su un piatto rivestito di carta assorbente e mettere da parte. Pulire l’olio rimasto nella pentola</li>
+                      </ul>
+                      <h3>Istruzioni per la salsa curry</h3>
+                      <ul>
+                        <li>Scaldare l'olio vegetale in una padella antiaderente media a fuoco medio-alto finché non luccica. Aggiungi cipolla, aglio e zenzero. Cuocere, mescolando continuamente con una spatola, fino a quando le cipolle si ammorbidiscono, circa 5 minuti. Aggiungi cumino, curcuma, paprika, coriandolo, polvere di curry e scaglie di peperoncino. Continua a cuocere fino a quando le spezie iniziano a sentire l'odore di tostato, circa 6 minuti.</li>
+                        <li>Ridurre il fuoco a medio e aggiungere il concentrato di pomodoro. Continua a cuocere, mescolando, fino a quando il concentrato di pomodoro non viene incorporato uniformemente, circa 3 minuti. Aggiungere la farina e mescolare fino a quando non sarà ben amalgamata. Versare l'acqua e il succo di limone nella padella e mescolare fino a quando il composto inizia ad addensarsi. Lasciare cuocere la salsa al curry fino a quando il composto si è ridotto a circa 1 1/2 tazze.</li>
+                        <li>Per frullare e filtrare (facoltativo): trasferire la salsa al curry in un robot da cucina o in un frullatore. Lavorare fino a che liscio, quindi passare attraverso un colino a maglie fini in un contenitore per la conservazione.</li>
+                        <li>Condire la salsa con sale e pepe a piacere, quindi utilizzare per preparare una varietà di deliziosi curry. La salsa al curry può essere conservata fino a una settimana in frigorifero.</li>
+                      </ul>
+                    </div>
           </div>
+        </div>
         </section>
-      </div>
-
-        
-
-      <section class="contacts">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="section-title">Contatti</h2>
-            <div class="separator"></div>
+      <div class="container">
+        <section class="Altro menu">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="section-title">Scegli tra il resto del menù</h2>
+              <div class="separator"></div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <p class="my-4">
-              Per ordinare le pizze chiama il 333 123456789 o compila il modulo
-              qui sotto:
-            </p>
-          </div>
-        </div>
-
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name" />
-          </div>
-          <div class="mb-3">
-            <label for="surname" class="form-label">Cognome</label>
-            <input type="text" class="form-control" id="surname" />
-          </div>
-          <div class="form-floating mb-3">
-            <textarea
-              class="form-control"
-              placeholder="Inserisci qui il tuo ordine..."
-              id="order"
-              style="height: 100px"
-            ></textarea>
-            <label for="order">Inserisci qui il tuo ordine...</label>
-          </div>
-
-          <fieldset class="mb-3">
-            <legend>Servizi aggiuntivi</legend>
-            <input type="checkbox" name="services" /> Posate
-            <br />
-            <input type="checkbox" name="services" /> Pizza tagliata
-            <br />
-            <input type="checkbox" name="services" /> Consegna premium
-          </fieldset>
-
-          <fieldset class="mb-3">
-            <legend>Servizi di pagamento</legend>
-            <input type="radio" name="payment" /> Contanti
-            <br />
-            <input type="radio" name="payment" /> Satispay
-            <br />
-            <input type="radio" name="payment" /> Carta di Credito
-          </fieldset>
-
-          <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </section>
-    </div>
 
     <!-- FOOTER -->
 
@@ -450,5 +493,8 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="../davide-lo-cascio/scripts/index.js">
+
+    </script>
   </body>
 </html>
