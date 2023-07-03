@@ -61,7 +61,8 @@ footer{
     text-align: center;
     font-size: 32px;
     margin: 0;
-    padding-bottom: 10px;   
+    padding-bottom: 10px;
+    padding-top: 10px;  
 }
 .container {    
     width: 900px;
