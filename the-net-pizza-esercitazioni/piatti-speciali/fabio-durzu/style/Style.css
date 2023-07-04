@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Pacifico';
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', cursive;
+}
+  .navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+}
+  p{
+    font-family: 'Roboto';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #main-header {
+    width: 100%;
+    height: 500px;
+    background-image: url('../assets/images/pancake4.jpg');
+    background-size: cover;
+    background-position: center -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 5px lightgray;
+  }
+
+  #main-header h1 {
+    color: white;
+    font-size: 100px;
+    margin: 0;
+    text-shadow: 2px 2px 4px black;
+  }
+
+  #main-header p {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px black;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 64px;
+  }
+
+  .separator {
+    width: 100px;
+    height: 4px;
+    background-color: #c1922e;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .card-text {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .section-title {
+    color:darkcyan;
+    font-size: 3.rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu ul li {
+    width: 200px;
+    height: 120px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 8px;
+    position: relative;
+}
+
+.price {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+}
+
+.opening-hours {
+    border: 1px solid black;
+}
+
+.opening-hours td {
+    border: 1px solid black;
+}
+
+.opening-hours th {
+    border: 1px solid black;
+}
+
+input[type="submit"] {
+    margin: 8px 0;
+    background-color: blue;
+    margin-top: 80%;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+}
+form{
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+}
+
+footer {
+    margin-top: 14px;
+    background-color: #8C2703;
+
+    color: white;
+}
+.footer-section-title
+{
+    font: roboto;
+    color: white;
+}
+.table-responsive {
+    width: 70%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+table {
+    border: 1px solid lightgray;
+    width: 80%;
+}
+
+table td, table th {
+    padding: 4px;
+    text-align: left;
+}
+
+table th {
+    background-color: white;
+    color: #8C2703;
+}
+
+.where-we-are {
+    font-size: 16px; 
+    margin: 30;
+    color: whitesmoke;
+  }
+  
