@@ -71,6 +71,11 @@ body {
     width: 100%;
     margin-bottom: 10px;
   }
+  
+  .small-card{
+    width: 80%;
+    margin: auto;
+  }
 
   .card-img-top {
     width: 100%;
