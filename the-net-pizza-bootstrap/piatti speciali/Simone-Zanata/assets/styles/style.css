@@ -20,10 +20,12 @@
     }
 
     #main-header h1 {
-        text-align: center;
+        color: white;
+        font-size: 128px;
+         margin: 0;
         font-family: 'Bebas Neue', sans-serif;
         font-size: 64px;
-        margin: 0;
+        text-align: center;
         text-shadow: 2px 2px 5px black;
     }
 
