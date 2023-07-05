@@ -1,0 +1,116 @@
+body{
+    font-family: 'Archivo', sans-serif;
+    text-align: center;
+}
+#margin{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+#header{
+    background-image: url(../assets/mug2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h1{
+font-family: 'Belanosima', sans-serif;
+font-size: 70px;
+color: black;
+text-shadow: 5px 5px 5px white;   
+text-align: center;
+
+
+}
+#header h2{
+    color: black;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    text-shadow: 3px 3px 3px white; 
+    text-align: center;
+  
+}
+
+#container{
+    font-size: 20px ;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+h3{
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.liste {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.liste ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.liste ul li {
+    width: 270px;
+    height: 160px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 8px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.tabella {
+    width: 0%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #7EA8F8;
+    border-style: solid;
+    color: #000000;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .tabella td, .tabella th {
+    border-style: solid;
+    text-align: center;
+    border: 1px;
+    padding: 5px;
+  }
+  
+  .tabella thead {
+    background-color: #7EA8F8;
+  }
+
+   .separator {
+    width: 100px;
+    height: 4px;
+    background-color: brown;
+    margin: 0 auto;
+}
