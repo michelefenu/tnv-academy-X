@@ -1,25 +1,26 @@
 const buildMenu = (piatti) => {
-    const sectionNames = ['antipasti', 'primi', 'dolci'];
+    const piattiCasuali = getPiattiCasuali(piatti, 3); 
 
-    sectionNames.forEach((sectionName, index) => {
-        const section = document.getElementById(sectionName);
-        const startIndex = index * 3;
-        const endIndex = startIndex + 3;
-        const cards = piatti.slice(startIndex, endIndex);
+    const antipasti = piattiCasuali.filter(x => x.category === 'antipasti');
+    const primi = piattiCasuali.filter(x => x.category === 'primi');
+    const dolci = piattiCasuali.filter(x => x.category === 'dolci');
 
-        buildSection(cards, sectionName, section);
-    });
+    buildSection(antipasti, 'antipasti');
+    buildSection(primi, 'primi');
+    buildSection(dolci, 'dolci');
 
     document.getElementById('menu').style.display = 'block';
     document.getElementById('loadingMessage').style.display = 'none';
 }
 
-const buildSection = (piatti, sectionName, section) => {
-    for (let piatto of piatti) {
+const buildSection = (piatti, sectionName) => {
+    const section = document.getElementById(sectionName);
+    
+    for(let piatto of piatti) {
         const card = document.createElement('div');
         card.classList.add('col-12', 'col-sm-6', 'col-md-4', 'py-2');
-
-        if (!piatto.available) {
+        
+        if(!piatto.available) {
             card.style.opacity = '0.5';
         }
 
@@ -40,6 +41,11 @@ const buildSection = (piatti, sectionName, section) => {
 
         section.appendChild(card);
     }
+}
+
+const getPiattiCasuali = (array, numItems) => {
+    const shuffled = array.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, numItems);
 }
 
 fetch('https://my-json-server.typicode.com/michelefenu/tnv-academy-X/piatti')
