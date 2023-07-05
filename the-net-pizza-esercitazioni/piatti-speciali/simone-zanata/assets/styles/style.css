@@ -1,4 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,500,800&display=swap');
+    
+    
     body {
         border: 0;
         padding: 0;
@@ -6,11 +10,12 @@
         font-family: 'Roboto', sans-serif;
     }
 
-    #main-header {
-        background: url(../images/Spaghetto.jpg);
+    header {
+        width: 100%;
+        height: 400px;
+        background-image: url(../images/Spaghetto.jpg);
         background-size: cover;
         background-position: center;
-        height: 375px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,30 +24,45 @@
         margin-bottom: 24px;
     }
 
-    #main-header h1 {
-        text-align: center;
+
+    header h1{
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 64px;
-        margin: 0;
+        margin-top: 20px;
+        font-size: 80px;
+        text-align: center;
+        text-shadow: 2px 2px 4px black;  
+    }
+
+    header p {
+        font-family: 'Pacifico', sans-serif;
+        margin: 16px;
         text-shadow: 2px 2px 5px black;
+        font-size: 30px;
+        text-align: center;
     }
 
     .card {
-        margin-top: 8px;
-        margin-bottom: 48px;
-        image-resolution: 300px;
-        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 8px;
+        width: auto;
         height: auto;
         font-family: 'Pacifico', sans-serif;
+        text-align: center;
         box-shadow: 2px 2px 5px grey;
         font-size: 18px;
     }
 
-    #main-header p {
-        font-family: 'Pacifico', sans-serif;
-        margin: 16px;
-        text-shadow: 2px 2px 5px black;
-        font-size: 32px;
+    .card-img-top{
+        width: auto; 
+        height: 100px; 
+        object-fit: cover; 
+    }
+
+    .card-body {
+        padding: 10px;
+        width: auto;
+        height: auto; 
+        
     }
 
     .container {
@@ -50,6 +70,14 @@
         margin: 0 auto;
         padding: 20px;
     }
+
+    
+    .container section {
+        margin-top: 64px;
+        margin-bottom: 32px;
+    }
+
+
     .Descrizione h3 {
         font-family: 'Bebas Neue', sans-serif;
         color: #0371A6;
@@ -81,7 +109,8 @@
         color: #0371A6;
         text-align: center;
         font-size: 1.5rem;
-        margin-top: 16px;  
+        margin-top: 65px; 
+        margin-bottom: 8px; 
     }
 
     .ricetta ul{
@@ -99,7 +128,7 @@
         margin-top: 16px;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 24px;
+        margin-bottom: 48px;
         width: 50%;
         border-collapse: collapse;
         box-shadow: 2px 2px 5px grey;
@@ -139,13 +168,21 @@
     }
 
     #info h5{
+        margin-top: 12px;
         font-family: 'Montserrat', sans-serif;
          color: black;
          text-align: left;
          font-size: 12px;
-         margin-top: 16px;   
      }
 
+     
+     #alternativa h3{
+        font-family: 'Bebas Neue', sans-serif;
+         color: #0371A6;
+         text-align: center;
+         font-size: 1.5rem;
+         margin-top: 65px;   
+     }
     
       
 

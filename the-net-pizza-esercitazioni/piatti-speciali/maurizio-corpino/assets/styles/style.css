@@ -6,8 +6,22 @@ body {
 }
 .container-fluid{   
     font-family: 'Bebas Neue', sans-serif;
-    background-color: rgba(240, 79, 79, 0.726);
+}
+footer{   
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #8C2703;
+    color: white;    
     
+}
+.testi {
+    font-family: 'Oswald', sans-serif;    
+    font-size: 24px;
+}
+#descrizione {
+    text-align: center;
+}
+.navbar fixed-top navbar-expand-lg bg-body-tertiary{
+    padding: 0% 0% 0% 0%;
 }
 
 
@@ -39,17 +53,18 @@ body {
 .container h2{
     color: #0371A6;    
     text-align: center;
-    font-size: 2rem;
+    font-size: 48px;
     margin-top: 16px;
 }
 .container h3{    
     color: #0371A6;
     text-align: center;
-    
-    margin: 0;   
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;  
 }
-.container {
-    
+.container {    
     width: 900px;
     margin: 0 auto 0 auto;    
 }
