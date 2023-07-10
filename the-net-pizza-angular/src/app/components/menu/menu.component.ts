@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Piatto } from 'src/app/models/piatto';
 
 @Component({
@@ -362,9 +363,13 @@ export class MenuComponent {
   primi: Piatto[] = [];
   dolci: Piatto[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
     this.antipasti = this.menu.filter(x => x.category === 'antipasti');
     this.primi = this.menu.filter(x => x.category === 'primi');
     this.dolci = this.menu.filter(x => x.category === 'dolci');
+  }
+
+  onItemClicked(id: number) {
+    this.router.navigateByUrl(`/menu/${id}`);
   }
 }

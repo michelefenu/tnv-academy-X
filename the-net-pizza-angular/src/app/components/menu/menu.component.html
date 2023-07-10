@@ -7,9 +7,9 @@
             </div>
         </div>
 
-        <app-menu-section [piatti]="antipasti" title="Antipasti"></app-menu-section>
-        <app-menu-section [piatti]="primi" title="primi"> </app-menu-section>
-        <app-menu-section [piatti]="dolci" title="dolci"></app-menu-section>
+        <app-menu-section (itemClicked)="onItemClicked($event)" [piatti]="antipasti" title="antipasti"></app-menu-section>
+        <app-menu-section (itemClicked)="onItemClicked($event)" [piatti]="primi" title="primi"> </app-menu-section>
+        <app-menu-section (itemClicked)="onItemClicked($event)" [piatti]="dolci" title="dolci"></app-menu-section>
 
     </section>
 </div>

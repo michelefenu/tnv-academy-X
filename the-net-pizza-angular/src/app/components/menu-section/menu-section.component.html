@@ -3,8 +3,7 @@
         <h3>{{ title }}</h3>
     </div>
 
-
-    <pre>
-    {{ piatti | json }}
-</pre>
+    <app-menu-item *ngFor="let piatto of piatti" [piatto]="piatto"
+        class="col-12 col-sm-6 col-md-4 py-2"
+        (clicked)="onClicked($event)"></app-menu-item>
 </div>

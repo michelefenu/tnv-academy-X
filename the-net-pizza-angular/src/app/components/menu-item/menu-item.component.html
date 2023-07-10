@@ -1,10 +1,10 @@
-
-    <div class="card shadow">
-        <img src="assets/images/tagliere-salumi.jpg" class="card-img-top" alt="Tagliere salumi" />
-        <div class="card-body">
-            <h5 class="card-title">Tagliere di Salumi - 12€</h5>
-            <p class="card-text">
-                Un assortimento di salumi regionali ed extraregionali.
-            </p>
-        </div>
+<!--     <div class="card shadow" *ngIf="piatto"> -->
+<div class="card shadow" (click)="onClick()">
+    <img [src]="piatto?.imageUrl" class="card-img-top" [alt]="piatto?.title" />
+    <div class="card-body">
+        <h5 class="card-title">{{ piatto?.title | titlecase }} - {{ piatto?.price | currency }}</h5>
+        <p class="card-text">
+            {{ piatto?.description }}
+        </p>
     </div>
+</div>

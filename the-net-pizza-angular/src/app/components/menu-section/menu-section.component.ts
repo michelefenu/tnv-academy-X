@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Piatto } from 'src/app/models/piatto';
 
 @Component({
@@ -11,4 +11,9 @@ export class MenuSectionComponent {
   @Input() title: string = '';
   @Input() piatti: Piatto[] = [];
 
+  @Output() itemClicked = new EventEmitter<number>();
+
+  onClicked(id: number) {
+    this.itemClicked.emit(id);
+  }
 }

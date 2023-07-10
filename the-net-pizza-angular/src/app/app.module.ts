@@ -11,6 +11,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuSectionComponent } from './components/menu-section/menu-section.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { MenuDetailComponent } from './components/menu-detail/menu-detail.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
     ContactsComponent,
     MenuComponent,
     MenuSectionComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    MenuDetailComponent
   ],
   imports: [
     BrowserModule,
