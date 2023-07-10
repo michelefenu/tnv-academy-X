@@ -1,18 +1,9 @@
-/* const buildList = (piatti) => {
-    const testUlElement = document.getElementById('test');
-
-    for (let piatto of piatti) {
-        const liElement = document.createElement('li');
-        liElement.innerText = piatto.title;
-
-        testUlElement.appendChild(liElement);
-    }
-} */
-
 const buildMenu = (piatti) => {
-    const antipasti = piatti.filter(x => x.category === 'antipasti');
-    const primi = piatti.filter(x => x.category === 'primi');
-    const dolci = piatti.filter(x => x.category === 'dolci');
+    const piattiCasuali = getPiattiCasuali(piatti, 3); 
+
+    const antipasti = piattiCasuali.filter(x => x.category === 'antipasti');
+    const primi = piattiCasuali.filter(x => x.category === 'primi');
+    const dolci = piattiCasuali.filter(x => x.category === 'dolci');
 
     buildSection(antipasti, 'antipasti');
     buildSection(primi, 'primi');
@@ -52,7 +43,12 @@ const buildSection = (piatti, sectionName) => {
     }
 }
 
-fetch('http://my-json-server.typicode.com/michelefenu/tnv-academy-X/piatti')
+const getPiattiCasuali = (array, numItems) => {
+    const shuffled = array.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, numItems);
+}
+
+fetch('https://my-json-server.typicode.com/michelefenu/tnv-academy-X/piatti')
     .then((response) => response.json())
     .then((response) => buildMenu(response))
     .catch((error) => console.log('ERRORE', error));
