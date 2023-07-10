@@ -1,0 +1,14 @@
+import { Component, Input } from '@angular/core';
+import { Piatto } from 'src/app/models/piatto';
+
+@Component({
+  selector: 'app-menu-section',
+  templateUrl: './menu-section.component.html',
+  styleUrls: ['./menu-section.component.scss']
+})
+export class MenuSectionComponent {
+
+  @Input() title: string = '';
+  @Input() piatti: Piatto[] = [];
+
+}

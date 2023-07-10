@@ -1,0 +1,59 @@
+<section class="contacts">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Contatti</h2>
+        <div class="separator"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="my-4">
+          Per ordinare le pizze chiama il 333 123456789 o compila il modulo
+          qui sotto:
+        </p>
+      </div>
+    </div>
+
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-3">
+        <label for="surname" class="form-label">Cognome</label>
+        <input type="text" class="form-control" id="surname" />
+      </div>
+      <div class="form-floating mb-3">
+        <textarea
+          class="form-control"
+          placeholder="Inserisci qui il tuo ordine..."
+          id="order"
+          style="height: 100px"
+        ></textarea>
+        <label for="order">Inserisci qui il tuo ordine...</label>
+      </div>
+
+      <fieldset class="mb-3">
+        <legend>Servizi aggiuntivi</legend>
+        <input type="checkbox" name="services" /> Posate
+        <br />
+        <input type="checkbox" name="services" /> Pizza tagliata
+        <br />
+        <input type="checkbox" name="services" /> Consegna premium
+      </fieldset>
+
+      <fieldset class="mb-3">
+        <legend>Servizi di pagamento</legend>
+        <input type="radio" name="payment" /> Contanti
+        <br />
+        <input type="radio" name="payment" /> Satispay
+        <br />
+        <input type="radio" name="payment" /> Carta di Credito
+      </fieldset>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </section>
+  

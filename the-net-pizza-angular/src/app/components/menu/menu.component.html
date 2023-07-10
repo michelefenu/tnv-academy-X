@@ -1,0 +1,15 @@
+<div class="container">
+    <section class="menu">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">{{ title }}</h2>
+                <div class="separator"></div>
+            </div>
+        </div>
+
+        <app-menu-section [piatti]="antipasti" title="Antipasti"></app-menu-section>
+        <app-menu-section [piatti]="primi" title="primi"> </app-menu-section>
+        <app-menu-section [piatti]="dolci" title="dolci"></app-menu-section>
+
+    </section>
+</div>
