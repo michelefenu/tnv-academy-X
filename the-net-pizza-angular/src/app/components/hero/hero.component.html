@@ -1,4 +1,10 @@
 <header>
-    <h1>The Net Pizza</h1>
-    <p>La vera pizza full stack</p>
+    <ng-container *ngIf="!apiService.activePiatto">
+        <h1>The Net Pizza</h1>
+        <p>La vera pizza full stack</p>
+     </ng-container>
+
+     <ng-container *ngIf="apiService.activePiatto">
+        <h1>{{ apiService.activePiatto.title }}</h1>
+     </ng-container>
 </header>

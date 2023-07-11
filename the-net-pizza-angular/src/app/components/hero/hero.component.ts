@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-hero',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  constructor(public apiService: ApiService) {
+    
+  }
 }

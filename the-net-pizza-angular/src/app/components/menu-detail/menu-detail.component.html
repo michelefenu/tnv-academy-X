@@ -1,1 +1,3 @@
-<h1>Pagina di dettaglio per il piatto con id {{ piattoId }}</h1>
+<h1>{{ apiService.activePiatto?.title }}</h1>
+<p>{{  apiService.activePiatto?.description }}</p>
+<img [src]="apiService.activePiatto?.imageUrl" [alt]="apiService.activePiatto?.title">

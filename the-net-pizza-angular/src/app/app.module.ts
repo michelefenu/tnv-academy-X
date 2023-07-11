@@ -12,6 +12,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuSectionComponent } from './components/menu-section/menu-section.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MenuDetailComponent } from './components/menu-detail/menu-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MenuDetailComponent } from './components/menu-detail/menu-detail.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
