@@ -1,0 +1,34 @@
+<form #f="ngForm" (ngSubmit)="onSave(f)">
+    <div class="form-group">
+        <label for="title">Nome del Piatto</label>
+        <input type="text" class="form-control" id="title" name="title" [ngModel]>
+    </div>
+    <div class="form-group mt-2">
+        <label for="description">Descrizione</label>
+        <input type="text" class="form-control" id="description" name="description" [ngModel]>
+    </div>
+    <div class="form-group mt-2">
+        <label for="imageUrl">URL immagine</label>
+        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [ngModel]>
+    </div>
+    <div class="form-group mt-2">
+        <label for="price">Prezzo</label>
+        <input type="number" class="form-control" id="price" name="price" [ngModel]>
+    </div>
+    <div class="form-group mt-2">
+    <label for="category">Categoria</label>
+    <select class="form-control  mt-2" id="category" name="category" [ngModel]>
+        <option value="antipasti">Antipasti</option>
+        <option value="primi">Primi</option>
+        <option value="secondi">Secondi</option>
+        <option value="pizze">Pizze</option>
+        <option value="dolci">Dolci</option>
+        <option value="bibite">Bibite</option>
+    </select>
+    </div>
+    <div class="form-check mt-2">
+        <input type="checkbox" class="form-check-input" id="available" name="available" [ngModel]>
+        <label class="form-check-label" for="available">Disponibile</label>
+    </div>
+    <button type="submit" class="btn btn-primary  mt-2">Salva</button>
+</form>

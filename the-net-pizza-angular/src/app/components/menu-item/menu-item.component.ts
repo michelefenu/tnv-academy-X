@@ -13,8 +13,13 @@ export class MenuItemComponent {
   //@Input() piatto: Partial<Piatto> = {};
 
   @Output() clicked = new EventEmitter<number>();
+  @Output() delete = new EventEmitter<number>();
 
   onClick() {
     this.clicked.emit(this.piatto?.id);
+  }
+
+  onDelete() {
+    this.delete.emit(this.piatto?.id);
   }
 }

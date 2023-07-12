@@ -13,7 +13,8 @@ import { MenuSectionComponent } from './components/menu-section/menu-section.com
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MenuDetailComponent } from './components/menu-detail/menu-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { EditPiattoComponent } from './components/edit-piatto/edit-piatto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     MenuSectionComponent,
     MenuItemComponent,
-    MenuDetailComponent
+    MenuDetailComponent,
+    EditPiattoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

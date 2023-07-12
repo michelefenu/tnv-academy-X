@@ -14,9 +14,7 @@ export class MenuComponent implements OnInit {
 
   private menu: Piatto[] = [];
 
-  antipasti: Piatto[] = [];
-  primi: Piatto[] = [];
-  dolci: Piatto[] = [];
+  sections: Piatto[][] = [];
 
   constructor(private router: Router, private http: HttpClient, private apiService: ApiService) {
   }
@@ -33,23 +31,46 @@ export class MenuComponent implements OnInit {
          this.dolci = this.menu.filter(x => x.category === 'dolci');
        }) */
 
-       this.apiService.activePiatto = null;
+    this.apiService.activePiatto = null;
 
-    this.apiService.getPiatti()
-      .subscribe({
-        next: (response) => {
-          this.menu = response;
-
-          this.antipasti = this.menu.filter(x => x.category === 'antipasti');
-          this.primi = this.menu.filter(x => x.category === 'primi');
-          this.dolci = this.menu.filter(x => x.category === 'dolci');
-        },
-       /*  error: (error) => console.log('ERRORE!', error),
-        complete: () => console.log('Complete!') */
-      })
+    this.loadData();
   }
 
   onItemClicked(id: number) {
     this.router.navigateByUrl(`/menu/${id}`);
+  }
+
+  onDelete(id: number) {
+    this.apiService.deletePiatto(id).subscribe({
+      next: () => {
+        console.log('Piatto Eliminato');
+        this.loadData();
+      }
+    })
+  }
+
+  onSavePiatto(piatto: Partial<Piatto>) {
+    this.apiService.addPiatto(piatto).subscribe({
+      next: () => {
+        console.log('Piatto Aggiunto con Successo');
+        this.loadData();
+      }
+    });
+  }
+
+  private loadData() {
+    this.apiService.getPiatti().subscribe({
+          next: (response) => {
+            this.menu = response;
+  
+            const categories = [...new Set(this.menu.map(x => x.category))];
+  
+            this.sections = [];
+            for (let category of categories) {
+              this.sections.push(this.menu.filter(x => x.category === category))
+            }
+  
+          }
+        })
   }
 }

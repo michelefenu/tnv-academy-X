@@ -12,8 +12,13 @@ export class MenuSectionComponent {
   @Input() piatti: Piatto[] = [];
 
   @Output() itemClicked = new EventEmitter<number>();
+  @Output() delete = new EventEmitter<number>();
 
   onClicked(id: number) {
     this.itemClicked.emit(id);
+  }
+
+  onDelete(id: number) {
+    this.delete.emit(id);
   }
 }

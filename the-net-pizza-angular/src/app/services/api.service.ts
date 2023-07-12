@@ -7,10 +7,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  API_ROOT = 'http://my-json-server.typicode.com/michelefenu/tnv-academy-X';
+  API_ROOT = 'http://localhost:1234/api';
 
   activePiatto: Piatto | undefined | null;
-
+  
   constructor(private http: HttpClient) { }
 
   setActivePiatto(id: number) {
@@ -22,5 +22,13 @@ export class ApiService {
 
   getPiatti() {
     return this.http.get<Piatto[]>(`${this.API_ROOT}/piatti`);
+  }
+
+  addPiatto(piatto: Partial<Piatto>) {
+    return this.http.post<Piatto>(`${this.API_ROOT}/piatti`, piatto);
+  }
+
+  deletePiatto(id: number) {
+    return this.http.delete(`${this.API_ROOT}/piatti/${id}`);
   }
 }

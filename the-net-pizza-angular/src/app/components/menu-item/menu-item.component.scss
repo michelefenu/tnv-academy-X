@@ -1,3 +1,8 @@
-.card {
+h5.card-title span {
     cursor: pointer;
+    color: darkred;
+}
+
+h5.card-title span:hover {
+    color: red;
 }
