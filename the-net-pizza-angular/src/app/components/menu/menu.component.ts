@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { debounceTime } from 'rxjs';
 import { Piatto } from 'src/app/models/piatto';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -9,21 +10,46 @@ import { ApiService } from 'src/app/services/api.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnChanges, OnInit {
   title = 'I nostri piatti';
 
-  private menu: Piatto[] = [];
+  @Input() menu: Piatto[] = [];
+
+  filteredPiatti: Piatto[] = [];
 
   sections: Piatto[][] = [];
 
   piatto: Partial<Piatto> = {};
 
-  constructor(private router: Router, private http: HttpClient, private apiService: ApiService) {
+  search = new FormControl('');
+
+  constructor(private router: Router, private apiService: ApiService) {
   }
 
   ngOnInit(): void {
-    this.apiService.activePiatto = null;
-    this.loadData();
+    this.search.valueChanges.pipe(
+      debounceTime(1000)
+    ).subscribe({
+      next: (data) => {
+        this.filteredPiatti = this.menu.filter(x => x.title.toLowerCase().includes(data?.toLowerCase() || ''));
+        this.updateSections();
+      },
+      complete: () => console.log('complete!')
+    })
+  }
+
+  ngOnChanges(): void {
+    this.filteredPiatti = this.menu;
+    this.updateSections();
+  }
+
+  private updateSections() {
+    const categories = [...new Set(this.filteredPiatti.map(x => x.category))];
+
+    this.sections = [];
+    for (let category of categories) {
+      this.sections.push(this.filteredPiatti.filter(x => x.category === category))
+    }
   }
 
   onItemClicked(id: number) {
@@ -31,52 +57,18 @@ export class MenuComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    this.apiService.deletePiatto(id).subscribe({
-      next: () => {
-        console.log('Piatto Eliminato');
-        this.loadData();
-      }
-    })
+    this.apiService.deletePiatto(id);
   }
 
   onEdit(piatto: Piatto) {
-    this.piatto = {...piatto};
+    this.piatto = { ...piatto };
   }
 
-
   onEditPiatto(piatto: Partial<Piatto>) {
-    this.apiService.editPiatto(piatto).subscribe({
-      next: () => {
-        console.log('Piatto Modificato con Successo');
-        this.piatto = {};
-        this.loadData();
-      }
-    });
+    this.apiService.editPiatto(piatto);
   }
 
   onSavePiatto(piatto: Partial<Piatto>) {
-    this.apiService.addPiatto(piatto).subscribe({
-      next: () => {
-        console.log('Piatto Aggiunto con Successo');
-        this.piatto = {};
-        this.loadData();
-      }
-    });
-  }
-
-  private loadData() {
-    this.apiService.getPiatti().subscribe({
-          next: (response) => {
-            this.menu = response;
-  
-            const categories = [...new Set(this.menu.map(x => x.category))];
-  
-            this.sections = [];
-            for (let category of categories) {
-              this.sections.push(this.menu.filter(x => x.category === category))
-            }
-  
-          }
-        })
+    this.apiService.addPiatto(piatto);
   }
 }

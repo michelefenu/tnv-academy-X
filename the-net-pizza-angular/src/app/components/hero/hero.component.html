@@ -2,6 +2,7 @@
     <ng-container *ngIf="!apiService.activePiatto">
         <h1>The Net Pizza</h1>
         <p>La vera pizza full stack</p>
+        <p>Abbiamo {{ apiService.menu.length }} piatti in menu!!!</p>
      </ng-container>
 
      <ng-container *ngIf="apiService.activePiatto">

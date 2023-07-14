@@ -10,8 +10,11 @@ export class ApiService {
   API_ROOT = 'http://localhost:1234/api';
 
   activePiatto: Piatto | undefined | null;
+  menu: Piatto[] = [];
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.getPiatti();
+  }
 
   setActivePiatto(id: number) {
     this.http.get<Piatto>(`${this.API_ROOT}/piatti/${id}`)
@@ -21,18 +24,26 @@ export class ApiService {
   }
 
   getPiatti() {
-    return this.http.get<Piatto[]>(`${this.API_ROOT}/piatti`);
+    this.http.get<Piatto[]>(`${this.API_ROOT}/piatti`).subscribe({
+      next: (response) => this.menu = response
+    });
   }
 
   addPiatto(piatto: Partial<Piatto>) {
-    return this.http.post<Piatto>(`${this.API_ROOT}/piatti`, piatto);
+    this.http.post<any>(`${this.API_ROOT}/piatti`, piatto).subscribe({
+      next: (response) => this.menu = [...this.menu, response.data]
+    });
   }
 
   editPiatto(piatto: Partial<Piatto>) {
-    return this.http.patch<Piatto>(`${this.API_ROOT}/piatti/${piatto.id}`, piatto);
+    return this.http.patch<any>(`${this.API_ROOT}/piatti/${piatto.id}`, piatto).subscribe({
+      next: () => this.menu = this.menu.map(x => x.id === piatto.id ? piatto as Piatto : x)
+    });
   }
 
   deletePiatto(id: number) {
-    return this.http.delete(`${this.API_ROOT}/piatti/${id}`);
+    return this.http.delete(`${this.API_ROOT}/piatti/${id}`).subscribe({
+      next: () => this.menu = this.menu.filter(x => x.id !== id)
+    });
   }
 }

@@ -14,7 +14,8 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MenuDetailComponent } from './components/menu-detail/menu-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditPiattoComponent } from './components/edit-piatto/edit-piatto.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PageMenuComponent } from './components/page-menu/page-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,15 @@ import { FormsModule } from '@angular/forms';
     MenuSectionComponent,
     MenuItemComponent,
     MenuDetailComponent,
-    EditPiattoComponent
+    EditPiattoComponent,
+    PageMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,10 @@
 
         <app-edit-piatto (savePiatto)="onSavePiatto($event)" (editPiatto)="onEditPiatto($event)" [piatto]="piatto"></app-edit-piatto>
 
+        <div class="form-group">
+            <input type="text" class="form-control mt-2" placeholder="Filtra menu..." [formControl]="search">
+        </div>
+
         <app-menu-section *ngFor="let section of sections" 
             (itemClicked)="onItemClicked($event)" 
             (delete)="onDelete($event)" 
