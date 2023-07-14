@@ -16,23 +16,13 @@ export class MenuComponent implements OnInit {
 
   sections: Piatto[][] = [];
 
+  piatto: Partial<Piatto> = {};
+
   constructor(private router: Router, private http: HttpClient, private apiService: ApiService) {
   }
 
   ngOnInit(): void {
-    /*  fetch(`http://my-json-server.typicode.com/michelefenu/tnv-academy-X/piatti`)
-       .then(res => res.json())
-       .then((res) => {
- 
-         this.menu = res;
- 
-         this.antipasti = this.menu.filter(x => x.category === 'antipasti');
-         this.primi = this.menu.filter(x => x.category === 'primi');
-         this.dolci = this.menu.filter(x => x.category === 'dolci');
-       }) */
-
     this.apiService.activePiatto = null;
-
     this.loadData();
   }
 
@@ -49,10 +39,26 @@ export class MenuComponent implements OnInit {
     })
   }
 
+  onEdit(piatto: Piatto) {
+    this.piatto = {...piatto};
+  }
+
+
+  onEditPiatto(piatto: Partial<Piatto>) {
+    this.apiService.editPiatto(piatto).subscribe({
+      next: () => {
+        console.log('Piatto Modificato con Successo');
+        this.piatto = {};
+        this.loadData();
+      }
+    });
+  }
+
   onSavePiatto(piatto: Partial<Piatto>) {
     this.apiService.addPiatto(piatto).subscribe({
       next: () => {
         console.log('Piatto Aggiunto con Successo');
+        this.piatto = {};
         this.loadData();
       }
     });

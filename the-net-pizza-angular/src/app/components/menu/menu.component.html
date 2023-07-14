@@ -7,11 +7,12 @@
             </div>
         </div>
 
-        <app-edit-piatto (savePiatto)="onSavePiatto($event)"></app-edit-piatto>
+        <app-edit-piatto (savePiatto)="onSavePiatto($event)" (editPiatto)="onEditPiatto($event)" [piatto]="piatto"></app-edit-piatto>
 
         <app-menu-section *ngFor="let section of sections" 
             (itemClicked)="onItemClicked($event)" 
             (delete)="onDelete($event)" 
+            (edit)="onEdit($event)" 
             [piatti]="section"
             [title]="section[0].category"
         ></app-menu-section>

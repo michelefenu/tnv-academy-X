@@ -28,6 +28,10 @@ export class ApiService {
     return this.http.post<Piatto>(`${this.API_ROOT}/piatti`, piatto);
   }
 
+  editPiatto(piatto: Partial<Piatto>) {
+    return this.http.patch<Piatto>(`${this.API_ROOT}/piatti/${piatto.id}`, piatto);
+  }
+
   deletePiatto(id: number) {
     return this.http.delete(`${this.API_ROOT}/piatti/${id}`);
   }

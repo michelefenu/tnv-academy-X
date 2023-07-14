@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Piatto } from 'src/app/models/piatto';
 
@@ -10,10 +10,14 @@ import { Piatto } from 'src/app/models/piatto';
 export class EditPiattoComponent {
 
   @Output() savePiatto = new EventEmitter<Partial<Piatto>>();
+  @Output() editPiatto = new EventEmitter<Partial<Piatto>>();
+  @Input() piatto: Partial<Piatto> = {};
 
+  onSave() {
+    this.savePiatto.emit(this.piatto);
+  }
 
-  onSave(form: NgForm) {
-    console.log(form);
-    this.savePiatto.emit(form.value);
+  onEdit() {
+    this.editPiatto.emit(this.piatto);
   }
 }

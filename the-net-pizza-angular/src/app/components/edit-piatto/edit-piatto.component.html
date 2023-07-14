@@ -1,23 +1,23 @@
-<form #f="ngForm" (ngSubmit)="onSave(f)">
+<form>
     <div class="form-group">
         <label for="title">Nome del Piatto</label>
-        <input type="text" class="form-control" id="title" name="title" [ngModel]>
+        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="piatto.title">
     </div>
     <div class="form-group mt-2">
         <label for="description">Descrizione</label>
-        <input type="text" class="form-control" id="description" name="description" [ngModel]>
+        <input type="text" class="form-control" id="description" name="description" [(ngModel)]="piatto.description">
     </div>
     <div class="form-group mt-2">
         <label for="imageUrl">URL immagine</label>
-        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [ngModel]>
+        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="piatto.imageUrl">
     </div>
     <div class="form-group mt-2">
         <label for="price">Prezzo</label>
-        <input type="number" class="form-control" id="price" name="price" [ngModel]>
+        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="piatto.price">
     </div>
     <div class="form-group mt-2">
     <label for="category">Categoria</label>
-    <select class="form-control  mt-2" id="category" name="category" [ngModel]>
+    <select class="form-control  mt-2" id="category" name="category" [(ngModel)]="piatto.category">
         <option value="antipasti">Antipasti</option>
         <option value="primi">Primi</option>
         <option value="secondi">Secondi</option>
@@ -27,8 +27,9 @@
     </select>
     </div>
     <div class="form-check mt-2">
-        <input type="checkbox" class="form-check-input" id="available" name="available" [ngModel]>
+        <input type="checkbox" class="form-check-input" id="available" name="available"[(ngModel)]="piatto.available">
         <label class="form-check-label" for="available">Disponibile</label>
     </div>
-    <button type="submit" class="btn btn-primary  mt-2">Salva</button>
+    <button class="btn btn-primary  mt-2" *ngIf="!piatto.id" (click)="onSave()">Salva</button>
+    <button class="btn btn-primary  mt-2" *ngIf="piatto.id" (click)="onEdit()">Modifica</button>
 </form>
